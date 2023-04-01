@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import IntrusionAlert from './IntrusionAlert';
-
+import LiveFeed from './LiveFeed';
 
 const Account = () => {
     const { user, logout } = UserAuth();
@@ -12,6 +12,9 @@ const Account = () => {
         try {
             await logout();
             navigate('/');
+            // <LiveFeed />
+
+
             console.log('You are logged out')
         } catch (e) {
             console.log(e.message);
@@ -29,7 +32,9 @@ const Account = () => {
                 </button>
 
             </div>
+            <LiveFeed />
             <IntrusionAlert />
+
         </div>
     );
 };
