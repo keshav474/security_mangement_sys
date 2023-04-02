@@ -16,6 +16,9 @@ const LiveFeed = () => {
       .catch(function (err) {
         console.log(err.name + ": " + err.message);
       }); // always check for errors at the end.
+      
+      
+
   };
 
   useEffect(() => {
@@ -24,7 +27,9 @@ const LiveFeed = () => {
 
   return (
     <div>
-      <video autoPlay={false} id="videoElement"></video>
+      <video autoPlay={true} id="videoElement">
+        
+      </video>
     </div>
   );
 };
