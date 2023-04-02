@@ -12,6 +12,6 @@ jobs:
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          repoToken: '55d60c4c6cd2cbb2a490a8a1d25892aa4723ee6e'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SECURITYSYS_F6FDC }}'
           projectId: securitysys-f6fdc
