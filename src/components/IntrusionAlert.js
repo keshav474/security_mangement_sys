@@ -20,6 +20,7 @@ export default function IntrusionAlert() {
     }, function(error) {
        console.log('FAILED...', error);
     });
+    alert("Email sent to " + user.email)
   }
 
   return (
