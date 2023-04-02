@@ -22,7 +22,7 @@ const Account = () => {
   };
 
   return (
-    <div className="bg-gray-500">
+    <div className="bg-gray-500 overflow-hidden">
 
         <div>
           <h1 className="text-2xl font-bold py-4">Account</h1>
