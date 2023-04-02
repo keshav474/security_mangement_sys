@@ -1,5 +1,18 @@
 import React, { useEffect } from "react";
 
+
+const stopFunction = () =>{
+  var video = document.querySelector("video");
+  var stream = video.srcObject;
+  var tracks = stream.getTracks();
+
+  for (var i = 0; i < tracks.length; i++) {
+    var track = tracks[i];
+    track.stop();
+  }
+
+  video.srcObject = null;
+}
 const LiveFeed = () => {
   const streamCamVideo = () => {
     var constraints = { audio: false, video: { width: 1280, height: 720 } };
@@ -34,4 +47,4 @@ const LiveFeed = () => {
   );
 };
 
-export default LiveFeed;
+export {LiveFeed , stopFunction};

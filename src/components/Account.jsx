@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import IntrusionAlert from "./IntrusionAlert";
-import LiveFeed from "./LiveFeed";
-import img from "./images/user.png";
+import {LiveFeed , stopFunction} from "./LiveFeed";
 
 const Account = () => {
   const { user, logout } = UserAuth();
@@ -12,6 +11,7 @@ const Account = () => {
   const handleLogout = async () => {
     try {
       await logout();
+      stopFunction();
       navigate("/");
 
       console.log("You are logged out");
