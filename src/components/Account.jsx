@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import IntrusionAlert from "./IntrusionAlert";
 import {LiveFeed , stopFunction} from "./LiveFeed";
+import img from "./images/user.png";
 
 const Account = () => {
   const { user, logout } = UserAuth();
