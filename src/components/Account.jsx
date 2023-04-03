@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import IntrusionAlert from "./IntrusionAlert";
-import {LiveFeed , stopFunction} from "./LiveFeed";
-import img from "./images/user.png";
+import {LiveFeed , stopFunction, startVideo} from "./LiveFeed";
+
 
 const Account = () => {
+  const [mode, setMode] = useState("ON");
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
 
@@ -20,7 +21,16 @@ const Account = () => {
       console.log(e.message);
     }
   };
-
+  // let mode="ON";
+  const privacyMode = async () => {
+    try {
+      if(mode === "ON") stopFunction();
+      else startVideo();
+      setMode(mode === "ON" ? "OFF" : "ON");
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
   return (
     <div className="bg-gray-500 overflow-hidden">
 
@@ -39,6 +49,9 @@ const Account = () => {
         <IntrusionAlert />
         <button onClick={handleLogout} className="border px-4 py-2 my-4 mx-5 bg-slate-  border-slate-500 bg-slate-600 hover:bg-slate-500   text-white">
           Logout
+        </button>
+        <button onClick={privacyMode} className="border px-4 py-2 my-4 mx-5 bg-slate-  border-slate-500 bg-slate-600 hover:bg-slate-500   text-white">
+          Turn Privacy Mode {mode}
         </button>
           <LiveFeed />
         </div>

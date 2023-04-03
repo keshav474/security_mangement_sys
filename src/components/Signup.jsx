@@ -26,13 +26,13 @@ const Signup = () => {
   return (
     <>
     <div class="relative h-screen overflow-y-clip bg-indigo-900">
-        <img src={img} class="absolute object-cover w-full h-full opacity-50" />
+        <img src={img} alt = "img"class="absolute object-cover w-full h-full opacity-50" />
         <div class="absolute inset-0 bg-black opacity-25"></div>
         <header class="absolute top-0 left-0 right-0 z-20">
           <nav class="container px-6 py-4 mx-auto md:px-12">
             <div class="items-center justify-between md:flex">
               <div class="flex items-center justify-between">
-                <a href="#" class="text-white">
+                <a href="/" class="text-white">
                   <svg
                     class="w-8 mr-2 fill-current"
                     xmlns="http://www.w3.org/2000/svg"

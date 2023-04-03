@@ -5,7 +5,6 @@ import Account from "./components/Account";
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
-import img from "./components/images/bg.jpeg";
 
 function App() {
   return (
