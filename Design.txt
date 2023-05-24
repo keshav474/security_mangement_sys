@@ -1,0 +1,46 @@
+Use Case: Personally Identifiable Information (PII) Management
+
+Actors:
+- User
+- System Administrator
+
+Use Cases:
+1. Collect PII:
+   - The User provides their personal information during registration or data entry.
+   - The system securely collects and stores the PII provided by the User.
+
+2. Access PII:
+   - The User requests access to their own PII.
+   - The system verifies the User's identity.
+   - If the User's identity is confirmed, the system retrieves and displays their PII.
+
+3. Update PII:
+   - The User requests to update their PII.
+   - The system verifies the User's identity.
+   - If the User's identity is confirmed, the system allows the User to modify their PII.
+
+4. Delete PII:
+   - The User requests to delete their PII from the system.
+   - The system verifies the User's identity.
+   - If the User's identity is confirmed, the system permanently removes their PII.
+
+5. Audit PII Access:
+   - The system logs and monitors access to PII.
+   - The system records details such as the User's ID, timestamp, and accessed PII.
+   - The Administrator can review the audit logs for security analysis and compliance.
+
+6. Manage Security Controls:
+   - The Administrator configures security controls for protecting PII.
+   - This includes defining access levels, encryption, and authentication mechanisms.
+   - The Administrator ensures compliance with data protection regulations.
+
+7. Respond to Data Breach:
+   - The system detects a potential data breach or security incident.
+   - The Administrator initiates incident response procedures.
+   - This may involve notifying affected individuals, investigating the breach, and mitigating risks.
+
+Relationships:
+- The User actor is associated with Use Cases 1, 2, 3, and 4.
+- The System Administrator actor is associated with Use Cases 5, 6, and 7.
+- Use Case 2 depends on the successful completion of Use Case 1.
+- Use Case 3 and Use Case 4 depend on the successful completion of Use Case 2.
