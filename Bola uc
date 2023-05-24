@@ -1,0 +1,42 @@
+Use Case: Broken Object Level Authorization (BOLA) Implementation
+
+Actors:
+- User
+- Administrator
+
+Use Cases:
+1. User Authentication:
+   - The User provides credentials to log in.
+   - The system verifies the user's credentials.
+   - If the credentials are valid, the system grants access to the user.
+
+2. Access Resource:
+   - The User requests to access a specific resource.
+   - The system checks the user's authorization level for the requested resource.
+   - If the user is authorized, the system grants access to the resource.
+   - If the user is not authorized, the system denies access and notifies the user.
+
+3. Modify Resource:
+   - The User requests to modify a specific resource.
+   - The system checks the user's authorization level for the resource.
+   - If the user is authorized to modify, the system allows the modification.
+   - If the user is not authorized, the system denies the modification and notifies the user.
+
+4. Administrator Access Control:
+   - The Administrator manages user roles and permissions.
+   - The Administrator can create, update, or delete user accounts.
+   - The Administrator can assign or revoke authorization levels for resources.
+
+5. Audit Logging:
+   - The system keeps track of user actions and resource access.
+   - The system logs details such as user ID, timestamp, and action performed.
+   - Audit logs can be used for security analysis and investigations.
+
+6. Security Incident Reporting:
+   - Users or administrators can report suspected security incidents.
+   - The system provides a mechanism to submit incident reports.
+   - Reported incidents can be reviewed and investigated by the security team.
+
+Relationships:
+- The User actor is associated with Use Cases 1, 2, and 3.
+- The Administrator actor is associated with Use Cases 4, 5, and 6.
