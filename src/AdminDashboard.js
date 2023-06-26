@@ -3,6 +3,7 @@ import { PieChart, Pie, Cell, Legend, Tooltip, Line } from "recharts";
 import PieComponent from "./PieComponent";
 import LineChartComponent from "./LineChartComponent";
 import BarChartComponent from "./BarChartComponent";
+import "./AdminDashboard.css";
 
 export default function AdminDashboard() {
   const dataPie = [
@@ -31,11 +32,28 @@ export default function AdminDashboard() {
     { api: "/home/report", unauthorizedRequests: 12 },
   ];
   return (
-    <div>
-      AdminDashboard
-      <PieComponent dataPie={dataPie} />
-      <LineChartComponent lineChartData={lineChartData} />
-      <BarChartComponent data={barChartData} />
+    <div className="admin-dashboard">
+      <h1 className="dashboard-title">Admin Dashboard</h1>
+      <div className="chart-container">
+        <div className="chart">
+          <h2>Pie Chart</h2>
+          <PieComponent dataPie={dataPie} />
+        </div>
+        <div className="chart">
+          <h2>Line Chart</h2>
+          <LineChartComponent data={lineChartData} />
+        </div>
+      </div>
+      <div className="chart-container">
+        <div className="chart">
+          <h2>Bar Chart</h2>
+          <BarChartComponent data={barChartData} />
+        </div>
+        <div className="chart">
+          <h2>Placeholder</h2>
+          <p>Some text or component</p>
+        </div>
+      </div>
     </div>
   );
 }

@@ -5,13 +5,14 @@ import Account from "./components/Account";
 import { Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminDashboard from "./AdminDashboard";
 
 function App() {
   return (
     <>
       <AuthContextProvider>
                 <Routes>
-              <Route path="/" element={<Signin />} />
+              <Route path="/" element={<AdminDashboard />} />
               <Route path="/signup" element={<Signup />} />
             </Routes>
           

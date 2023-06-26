@@ -9,9 +9,9 @@ import {
   Legend,
 } from "recharts";
 
-const LineChartComponent = ({ lineChartData }) => {
+const LineChartComponent = ({ data }) => {
   return (
-    <LineChart width={600} height={300} data={lineChartData}>
+    <LineChart width={600} height={300} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="time" />
       <YAxis />
